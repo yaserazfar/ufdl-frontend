@@ -6,8 +6,10 @@ import Main from './components/main';
 class App extends Component {
   render() {
     return (
+      <div className="background">
 
-      <Main/>
+        <Main/>
+      </div>
 
     );
   }
