@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactImageAnnotate from "react-image-annotate"
 
 class Annotate extends Component {    
     constructor(props) {
@@ -44,10 +45,24 @@ class Annotate extends Component {
                 <form className="selectForm" onSubmit={this._handleSubmit}>
                     <input type="file" id="file" className="fileInputButton" onChange={this._handleImageChange} />
                     <label for="file" class="fileLabel">Select Image</label>
-                    {/* <button type="submit" onClick={this._handleSubmit}>Upload Image</button> */}
+                    {/* <button type="submit" onClick={this._handleSubmit}>Send Annotations</button> */}
                 </form>
                 <div className="imageDisplay">
-                    {$imagePreview}
+
+{/* Probably will need an if statement so that we can check if an image has been uploaded before we annotate it */}
+
+                    <ReactImageAnnotate
+                        selectedImage="https://i.imgur.com/SY4z4Cx.jpg"
+                        taskDescription="# Draw region around each Kiwifruit bunch"
+                        images={[{ src: "https://i.imgur.com/SY4z4Cx.jpg", name: "Kiwifruit.png" }]}
+                        regionClsList={["Kiwifruit", "Human Face"]}
+                    />
+                  
+
+                    {/* {$imagePreview} */}
+
+
+
                 </div>
             </div>
         )

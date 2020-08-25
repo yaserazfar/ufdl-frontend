@@ -69,9 +69,24 @@ This looks cool as and is something we could do for the home screen.
 }
 
 .imageDisplay {
-  padding-top: 25px;
+  margin: 25px;
+  border-style: solid;
+  border-width: 5px;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+}
+
+img {
+  width: auto;
+  height: 100%;
+  max-height: 90vh;
+  /* max-width: 90vh; */ 
+  /* TODO: Need to limit the height so that images can fit in the box
+  But we need to avoid the image being resized */
 }
 
 .selectForm {
   padding-top: 25px;
+  padding-bottom: 20px;
 }
